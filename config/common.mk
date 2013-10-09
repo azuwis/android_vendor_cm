@@ -210,6 +210,20 @@ PRODUCT_PACKAGES += \
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
+# Custom packages
+PRODUCT_PACKAGES += \
+    tcpdump
+
+UNWANTED_PACKAGES = \
+    CMUpdater \
+    CellBroadcastReceiver \
+    Email \
+    Exchange2 \
+    Stk \
+    VoicePlus
+
+PRODUCT_PACKAGES := $(filter-out $(UNWANTED_PACKAGES),$(PRODUCT_PACKAGES))
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
