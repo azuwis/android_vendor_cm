@@ -165,6 +165,7 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     CMWallpapers \
     Apollo \
+    CMUpdater \
     CMFileManager \
     LockClock \
     CMAccount
@@ -174,9 +175,11 @@ PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
     org.cyanogenmod.hardware.xml
 
+PRODUCT_PACKAGES += \
+    CellBroadcastReceiver
+
 # Extra tools in CM
 PRODUCT_PACKAGES += \
-    tcpdump \
     openvpn \
     e2fsck \
     mke2fs \
